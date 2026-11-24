@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* მთლიანი საიტი ლურჯ ფერებში */
+body {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+/* ზედა ზოლი */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    background-color: #172554;
+    border-bottom: 1px solid #3b82f6;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* Search bar — დაჭერისას აუთლაინი ლურჯდება */
+.search-box {
+    flex: 1;
+    height: 36px;
+    padding: 0 14px;
+    background-color: #eff6ff;
+    border: 1px solid #93c5fd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #0f172a;
+    outline: 2px solid transparent;
+    outline-offset: 1px;
+    transition: border-color 0.2s ease, outline-color 0.2s ease, background-color 0.2s ease;
+}
+
+.search-box:focus {
+    background-color: #ffffff;
+    border-color: #38bdf8;
+    outline: 2px solid #38bdf8;
+}
+
+/* მარჯვენა ბლოკი: ჯერ მენიუს სამი ხაზი, მერე REGISTER */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: #2563eb;
+    border: 1px solid #93c5fd;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+.filter-section {
+    padding: 14px 20px 0;
+}
+
+.filter-box {
+    background-color: #1d4ed8;
+    border: 1px solid #60a5fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.filter-toggle {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color:  #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.filter-toggle .arrow {
+    font-size: 14px;
+    color: #ffffff;
+    transition: transform 0.5s ease;
+}
+
+.filter-box[open] .filter-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.filter-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 14px 18px;
+   
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 0 1 170px;
+    max-width: 180px;
+}
+
+.filter-group:last-child {
+    flex: 0 1 auto;
+    max-width: none;
+}
+
+.filter-group select,
+.filter-group input[type="number"] {
+    width: 100%;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 6px;
+    border: 1px solid #93c5fd;
+    background-color:#eff6ff;
+    color: #444343;
+    font-size: 12px;
+    outline: 2px solid transparent;
+}
+
+.filter-group select:focus,
+.filter-group input[type="number"]:focus {
+    background-color: #ffffff;
+    border-color: #38bdf8;
+    outline: 2px solid #38bdf8;
+}
+
+.radio-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.radio-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    padding: 18px 20px;
+}
+
+.car-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d4ed8;
+    border: 1px solid #60a5fa;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.car-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #93c5fd;
+    background-color: #172554;
+    margin-bottom: 8px;
+}
+
+.car-card h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.car-card p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #dbeafe;
+    margin-bottom: 3px;
+}
+
+.car-price {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+.buy-btn {
+    margin-top: auto;
+    align-self: flex-start;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fcfcfc;
+    border: 1px solid #93c5fd;
+    border-radius: 5px;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.buy-btn:hover {
+    background-color: #4b4dc76b;
+    transition: 0.5;
+
+}
+
+.mid-banner {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #172554 0%, #2563eb 55%, #1d4ed8 100%);
+    border: 1px solid #60a5fa;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+}
+
+.mid-banner-text h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.mid-banner-text h2 span {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 15px;
+}
+
+.mid-banner-text p {
+    font-size: 13px;
+    color: #dbeafe;
+    font-weight: 600;
+}
+
+
+.pill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.mid-banner-btn {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.mid-banner-btn:hover {
+    background-color: #eff6ff;
+}
+
+
+.footer-banner-wrap {
+    padding: 0 20px 16px;
+}
+
+.info-banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 22px;
+    border-radius: 12px;
+    background-color: #172554;
+    border: 1px solid #60a5fa;
+    color: #ffffff;
+}
+
+.info-banner p {
+    font-size: 13px;
+    color: #dbeafe;
+}
+
+.info-btn {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    padding: 8px 22px;
+    font-size: 13px;
+}
+
+.help-box {
+    max-width: 420px;
+    margin: 24px auto 32px;
+    padding: 18px 22px;
+    background-color: #3558b8;
+    border: 1px solid #60a5fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #ffffff;
+}
+
+.help-text {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.help-btn {
+    display: inline-block;
+    padding: 7px 22px;
+    background-color: #ffffff;
+    color: #2f52b0;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.help-btn:hover {
+    background-color: #eff6ff;
+}
+
+
+@media (max-width: 1200px) {
+    .cars-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mid-banner,
+    .info-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - AutoMarket</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b132b; 
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1c2541;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1c2541;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #3a86ff;
+            border-bottom: 1px solid #3a506b;
+            padding-bottom: 10px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: #0b132b;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .faq-item h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #d1d5db;
+            line-height: 1.5;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 15px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .back-btn {
+            background-color: #3a506b;
+            margin-top: 20px;
+        }
+        .back-btn:hover {
+            background-color:#2f22a3;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Second drive - Help & Customer Support</h1>
+        <p>How can we help you today?</p>
+    </div>
+
+    <div class="container">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+            <h3>1. How do I register and post a car for sale?</h3>
+            <p>Go back to the registration page, fill in your full name, email, password, and select your city. Once registered, click "Add Listing" to upload photos and details of your vehicle.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>2. How can I check a car's VIN code / history?</h3>
+            <p>Every listing on our platform includes a VIN code section. Always verify the VIN code before making a deposit or buying a used car.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>3. Is it free to browse and contact sellers?</h3>
+            <p>Yes! Browsing used cars and contacting sellers via phone or message is 100% free for all registered users.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>4. Safety Tips for Buyers</h3>
+            <p>Never send money in advance without inspecting the car in person. Always meet in a public place or at an authorized service center.</p>
+        </div>
+
+        <h2>Still need help? Contact Support</h2>
+        <form class="contact-form" onsubmit="alert('Your message has been sent to our support team!'); return false;">
+            <input type="email" placeholder="Your Email Address" required>
+            <select required>
+                <option value="">Select Issue Type</option>
+                <option value="registration">Registration / Login Problem</option>
+                <option value="listing">Car Listing Issue</option>
+                <option value="scam">Report a Suspicious Seller</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea rows="4" placeholder="Describe your problem here..." required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <a href="html2.html" class="btn back-btn">← Back to Registration</a>
+    </div>
+
+</body>
+</html>

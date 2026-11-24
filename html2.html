@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Second Drive</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b132b;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #1c2541;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 5px 0 0 0;
+            color: #d1d5db;
+        }
+        .container {
+            max-width: 450px;
+            width: 90%;
+            margin: 35px auto;
+            padding: 30px;
+            background-color: #1c2541;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #3a86ff;
+            border-bottom: 1px solid #3a506b;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #f3f7f6;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #3a506b;
+            background-color: #0b132b;
+            color: #ffffff;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            background-color: #0b132b;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #3a506b;
+        }
+        .radio-group label {
+            color: #ffffff;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 12px;
+        }
+        .btn-register {
+            flex: 2;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-register:hover {
+            background-color: #0056b3;
+        }
+        .btn-help {
+            flex: 1;
+            background-color: #3a506b;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-help:hover {
+            background-color: #2b3a3a;
+            color: #ffffff;
+        }
+        .btn-home {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 12px;
+            background-color: transparent;
+            color: #d1d5db;
+            border: 1px solid #3a506b;
+            padding: 11px;
+            border-radius: 6px;
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-home:hover {
+            background-color: #0b132b;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        .help-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #d1d5db;
+        }
+        .help-note a {
+            color: #2214e9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .help-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1> Second Drive</h1>
+        <p>Trusted Used Car Marketplace give cars second chance, sell cars for good profit.</p>
+    </div>
+
+    <div class="container">
+        <h2>- Create an Account -</h2>
+        
+     <form action="html3.html">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age" min="18" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Choose a city</label>
+                <select id="city" required>
+                    <option value="">Please select a city</option>
+                    <option value="tbilisi">Tbilisi</option>
+                    <option value="batumi">Batumi</option>
+                    <option value="kutaisi">Kutaisi</option>
+                    <option value="rustavi">Rustavi</option>
+                    <option value="gori">Gori</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <a href="help.html" class="btn-help">Help</a>
+
+             <button type="submit" class="btn-register">Register</button>
+            </div>
+
+            <a href="index.html" class="btn-home">← Back to Homepage</a>
+
+            <p class="help-note">
+                If you need help or have any problem, please press <a href="help.html">"Help"</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

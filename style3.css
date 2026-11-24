@@ -1,0 +1,76 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY6fw-vjHvr3aMqXvur4oOVW6Bv53aLmoBlmrGJZFpswUBEDqEiah1Cgk&s=10) ;
+    background-size:cover ;
+    background-position:center ;
+    background-repeat:no-repeat ;
+    background-attachment: fixed;
+}
+
+
+
+.container {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 30px;
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.container table {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.container input[type="text"],
+.container input[type="text"],
+.container input[type="text"],
+.container input[type="text"],
+.container input[type="text"],
+.container input[type="text"],
+.container select {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+button, .back-btn, input[type="submit"] {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover, .back-btn:hover {
+    background-color: #e2e2e2;
+}
+
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}

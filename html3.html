@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Information - Second Drive give cars second chance, sell cars for good profit.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b132b;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #1c2541;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #ffffff;
+        }
+        .header p {
+            margin: 5px 0 0 0;
+            color: #e5e7eb;
+        }
+        .container {
+            max-width: 460px;
+            width: 90%;
+            margin: 35px auto;
+            padding: 30px;
+            background-color: #1c2541;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #ffffff;
+            border-bottom: 1px solid #3a506b;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #3a506b;
+            background-color: #0b132b;
+            color: #ffffff;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .row-2 {
+            display: flex;
+            gap: 12px;
+        }
+        .row-2 .form-group {
+            flex: 1;
+        }
+        .info-note {
+            background-color: #dbdbdb;
+            border-left: 3px solid #007bff;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #000000;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+        
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 12px;
+        }
+        .btn-save {
+            flex: 2;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-save:hover {
+            background-color: #0056b3;
+        }
+        .btn-help {
+            flex: 1;
+            background-color: #3a506b;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-help:hover {
+            background-color: #4b6584;
+        }
+        .btn-home {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 12px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #3a506b;
+            padding: 11px;
+            border-radius: 6px;
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-home:hover {
+            background-color: #0b132b;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Second Drive give cars second chance, sell cars for good profit.</h1>
+        <p>Payment Card Details</p>
+    </div>
+
+    <div class="container">
+        <h2>Card Information</h2>
+
+        <form action="home.html">
+            <div class="form-group">
+                <label for="cardholder">Cardholder Name</label>
+                <input type="text" id="cardholder" placeholder="Enter name on card" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" minlenght="19" maxlength="19" required>
+            </div>
+
+            <div class="row-2">
+                <div class="form-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <div class="info-note">
+                Your card details are used only for service payments and listing features on Second Drive.
+            </div>
+
+            <div class="actions">
+                <a href="help.html" class="btn-help">Help</a>
+                <button type="submit" class="btn-save">PAY</button>
+            </div>
+
+            <a href="html2.html" class="btn-home">go Back </a>
+        </form>
+    </div>
+
+</body>
+</html>
